@@ -7,20 +7,21 @@
     <title>Fotogram</title>
     <link rel="" type="" href="">
 </head>
-<body>
+<body onload="renderPictures()">
     <header>
             <img class="fotogram_logo" src="./assets/logos/logo.svg" alt="fotogram_logo">
     </header>
     <main>
         <section class="gallery">
             <h1>Your personal photo album</h1>
-            <section class="picture_box"></section>
+            <section id="picture_box"></section>
         </section>
     </main>
     <footer>
         <img class="dev_logo" src="./assets/logos/logo_dev.svg" alt="dev_logo" >
         <span>©2023 Developer Akademie GmbH</span>
     </footer>
-    
+
+<script src="script.js"></script>
 </body>
 </html>
