@@ -15,7 +15,7 @@ let pictureList = [
 
 function getPictures(i){
     return `<div class="single_picture">
-                <img src="./assets/pictures/${pictureList[i]}" alt="Bild">
+                <img src="./assets/pictures/pic_thumb/${pictureList[i]}" alt="Bild">
             </div>`;            
 }
 
