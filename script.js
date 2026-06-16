@@ -13,6 +13,21 @@ let pictureList = [
     "pic_12.png" 
 ];
 
+let pictureListFullRes = [
+    "pic_1_full.jpg",
+    "pic_2_full.jpg",
+    "pic_3_full.jpg",
+    "pic_4_full.jpg",
+    "pic_5_full.jpg",
+    "pic_6_full.jpg",
+    "pic_7_full.jpg",
+    "pic_8_full.jpg",
+    "pic_9_full.jpg",
+    "pic_10_full.jpg",
+    "pic_11_full.jpg",
+    "pic_12_full.jpg" 
+];
+
 function getPictures(i){
     return `<div class="single_picture">
                 <img src="./assets/pictures/pic_thumb/${pictureList[i]}" alt="Bild">
