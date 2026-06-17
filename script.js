@@ -29,9 +29,9 @@ let pictureListFullRes = [
 ];
 
 function getPictures(i){
-    return `<div class="single_picture">
-                <img src="./assets/pictures/pic_thumb/${pictureList[i]}" alt="Bild">
-            </div>`;            
+    return `<button>
+                    <img class="single_picture" src="./assets/pictures/pic_thumb/${pictureList[i]}" alt="Bild">
+            </button>`;            
 }
 
 function renderPictures() {
