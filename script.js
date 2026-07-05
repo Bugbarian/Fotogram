@@ -1,19 +1,6 @@
-let pictureList = [
-    "pic_1.png",
-    "pic_2.png",
-    "pic_3.png",
-    "pic_4.png",
-    "pic_5.png",
-    "pic_6.png",
-    "pic_7.png",
-    "pic_8.png",
-    "pic_9.png",
-    "pic_10.png",
-    "pic_11.png",
-    "pic_12.png"
-];
 
-let pictureListFullRes = [
+
+let pictureList = [
     "pic_1_full.jpg",
     "pic_2_full.jpg",
     "pic_3_full.jpg",
@@ -30,7 +17,7 @@ let pictureListFullRes = [
 
 function getPictures(i) {
     return `<button onclick="showFullRes(${i})">
-                    <img class="single_picture" src="./assets/pictures/pic_thumb/${pictureList[i]}" alt="Thumbnail.png">
+                    <img class="single_picture" src="./assets/pictures/pic_full/${pictureList[i]}" alt="Thumbnail.png">
             </button>`;
 }
 
@@ -67,7 +54,7 @@ function showFullRes(i) {
         </header>
         <img 
             class="single_full_res" 
-            src="./assets/pictures/pic_full/${pictureListFullRes[i]}" 
+            src="./assets/pictures/pic_full/${pictureList[i]}" 
             alt="fullResPicture.png"
         >
         <nav>
