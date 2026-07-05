@@ -1,5 +1,4 @@
 
-
 let pictureList = [
     "pic_1_full.jpg",
     "pic_2_full.jpg",
