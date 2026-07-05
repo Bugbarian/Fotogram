@@ -14,6 +14,8 @@ let pictureList = [
     "pic_12_full.jpg"
 ];
 
+//* ----------- Bilder erzeugen
+
 function getPictures(i) {
     return `<button onclick="showFullRes(${i})">
                     <img class="single_picture" src="./assets/pictures/pic_full/${pictureList[i]}" alt="Thumbnail.png">
@@ -57,8 +59,8 @@ function showFullRes(i) {
             alt="fullResPicture.png"
         >
         <nav>
-            <p>links</p>
-            <p>rechts</p>
+            <button class="nav_button" onclick="showPreviousPicture()">links</button>
+            <button>rechts</button>
         </nav>
     `;
 }
