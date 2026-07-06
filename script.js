@@ -16,12 +16,6 @@ let pictureList = [
 
 //* ----------- Bilder erzeugen
 
-function getPictures(i) {
-    return `<button onclick="showFullRes(${i})">
-                    <img class="single_picture" src="./assets/pictures/pic_full/${pictureList[i]}" alt="Thumbnail.png">
-            </button>`;
-}
-
 function renderPictures() {
     let generatePictures = document.getElementById("picture_box");
     for (let i = 0; i < pictureList.length; i++) {
@@ -29,9 +23,15 @@ function renderPictures() {
     }
 }
 
+function getPictures(i) {
+    return `<button onclick="showFullRes(${i})">
+                    <img class="single_picture" src="./assets/pictures/pic_full/${pictureList[i]}" alt="Thumbnail.png">
+            </button>`;
+}
+
 //* ----------- DIALOG Sektion
 
-let dialogRef= document.getElementById("full_resolution_show_box");
+let dialogRef = document.getElementById("full_resolution_show_box");
 
 function openFullResolutionDialog() {
     dialogRef.showModal();
@@ -49,18 +49,25 @@ function showFullRes(i) {
 
     generateFullRes.innerHTML =
         `
-        <header>
-        <h2>Full Resolution</h2>
-        <button id="modal_button" onclick="closeFullResolutionDialog()">X</button>
-        </header>
-        <img 
-            class="single_full_res" 
+        <div class="full_res_box">
+            <div class="full_res_header">
+                <h2>Full Resolution</h2>
+                <button id="modal_button" onclick="closeFullResolutionDialog()">X</button>
+            </div>
+            <img 
+            class="single_full_res_img" 
             src="./assets/pictures/pic_full/${pictureList[i]}" 
             alt="fullResPicture.png"
-        >
-        <nav>
-            <button class="nav_button" onclick="showPreviousPicture()">links</button>
-            <button>rechts</button>
+            >
+        <nav class="full_res_nav">
+            <button class="nav_arrows" onclick="showPreviousPicture()">
+                <img class="nav_button_left" src="./assets/buttons/arrow/arrow_button.svg" alt="arrow_left.svg">
+            </button>
+            <p> 1/2 </p>
+            <button class="nav_arrows" onclick="showNextPicture()">
+                <img class="nav_button_right" src="./assets/buttons/arrow/arrow_button.svg" alt="arrow_right.svg">
+            </button>
         </nav>
+        </div>
     `;
 }

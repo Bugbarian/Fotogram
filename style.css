@@ -73,11 +73,12 @@ footer {
 }
 
 .single_picture {
-    width: 150px;
+    min-width: 150px;
     height: 150px;
     margin: 0 0 20px 0;
     border: 2px solid #124658;
     border-radius: 16px;
+    object-fit: cover;
 }
 
 h1 {
@@ -104,11 +105,6 @@ dialog {
     margin: auto;
 }
 
-.single_full_res {
-    object-fit: fill;
-    display: block;
-}
-
 h2  {
     color: white;
     font-size: 20px;
@@ -117,4 +113,60 @@ h2  {
 #modal_button {
     width: 10px;
     height: 10px;
+    color: white;
+}
+
+#full_resolution_show_box {
+    background-color: #05171E;
+    border-radius: 40px;
+    padding: 0 40px;
+    
+}
+
+.full_res_box {
+    max-width:100vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #05171E;
+}
+
+.single_full_res_img {
+    max-width: 100%;
+    max-height: 550px;
+    object-fit: contain;
+}
+
+.full_res_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+}
+
+.full_res_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav_arrows {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    color: white;
+}
+
+.nav_button_left {
+    transform: rotate(180deg);
+
+}
+
+p {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    font-family: figtree;
+    font-weight: 500;
 }
