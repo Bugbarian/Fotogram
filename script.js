@@ -52,7 +52,7 @@ function showFullRes(i) {
     generateFullRes.innerHTML =
         `
             <div class="full_res_header">
-                <h2>Full Resolution</h2>
+                <h2>NAME OF PICTURE</h2>
                 <button id="close_button" onclick="closeFullResolutionDialog()">
                 <img class="close_button" src="./assets/buttons/close/close_button.svg" alt="close_button.svg">
                 </button>
