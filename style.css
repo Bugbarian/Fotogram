@@ -169,7 +169,7 @@ p {
     
 }
 
-.nav_arrows {
+.nav_arrow_left, .nav_arrow_right {
     width: 60px;
     height: 60px;
     border-radius: 60px;

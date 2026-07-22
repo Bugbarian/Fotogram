@@ -47,6 +47,7 @@ function closeFullResolutionDialog() {
 
 function showFullRes(i) {
     openFullResolutionDialog();
+    currentPictureIndex = i;
     let generateFullRes = document.getElementById("full_resolution_show_box");
 
     generateFullRes.innerHTML =
@@ -63,13 +64,23 @@ function showFullRes(i) {
             alt="fullResPicture.png"
             >
         <nav class="full_res_nav">
-            <button class="nav_arrows" onclick="previousPicture()">
+            <button class="nav_arrow_left" onclick="previousPicture()">
                 <img class="nav_button_left" src="./assets/buttons/arrow/arrow_button.svg" alt="arrow_left.svg">
             </button>
-            <p> ${i + 1}/12 </p>
-            <button class="nav_arrows" onclick="showNextPicture()">
+            <p> ${i + 1}/${pictureList.length} </p>
+            <button class="nav_arrow_right" onclick="showNextPicture()">
                 <img class="nav_button_right" src="./assets/buttons/arrow/arrow_button.svg" alt="arrow_right.svg">
             </button>
         </nav>
     `;
+}
+
+function showNextPicture() {
+    currentPictureIndex++;
+    showFullRes(currentPictureIndex);
+}
+
+function previousPicture() {
+    currentPictureIndex--;
+    showFullRes(currentPictureIndex);
 }
